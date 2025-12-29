@@ -1,9 +1,16 @@
 import axios from "axios";
 import Editor from "react-simple-code-editor";
 
-function Left({ code, setCode }) {
+function Left({ code, setCode, setReview }) {
   const reviewCode = async () => {
-    const response = await axios.post()
+    const response = await axios.post(
+      "http://localhost:8000/api/ai/get-review",
+      { code }
+    );
+    const data = response.data;
+    console.log("data in Left", data);
+
+    setReview(data);
   };
 
   return (

@@ -11,14 +11,13 @@ function App() {
     Prism.highlightAll();
   }, []);
 
- 
-
   const [code, setCode] = useState("fucntion sum (){return 1+1}");
+  const [review, setReview] = useState("");
 
   return (
     <div id="main">
-      <Left code={code} setCode={setCode} />
-      <Right />
+      <Left code={code} setCode={setCode} setReview={setReview} />
+      <Right review={review} />
     </div>
   );
 }
