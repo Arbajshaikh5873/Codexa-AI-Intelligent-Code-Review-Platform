@@ -18,7 +18,7 @@ app.use("/api/ai", router);
 app.get("/", (req, res) => {
   res.send("server is running ");
 });
-
-app.listen(8000, () => {
-  console.log(`server is running on http://localhost:8000`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`server is running on http://localhost:${PORT}`);
 });
