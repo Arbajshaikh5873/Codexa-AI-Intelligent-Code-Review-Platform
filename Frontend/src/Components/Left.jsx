@@ -5,7 +5,7 @@ function Left({ code, setCode, setReview, setIsLoading }) {
   const reviewCode = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/ai/get-review",
+        "https://codexa-ai-intelligent-code-review.onrender.com/api/ai/get-review",
         { code }
       );
       const data = response.data;
