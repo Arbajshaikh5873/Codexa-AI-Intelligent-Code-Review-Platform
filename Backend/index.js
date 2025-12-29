@@ -9,9 +9,9 @@ const app = express();
 connectDb();
 
 app.use(express.json());
+
 app.use("/api/ai", router);
 
-console.log("GEMINI KEY:", process.env.GOOGLE_GEMINI_API_KEY);
 
 app.get("/", (req, res) => {
   res.send("server is running ");
